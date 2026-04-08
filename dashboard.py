@@ -19,10 +19,14 @@ fecha_seleccionada = st.date_input("Fecha a analizar:")
 @st.cache_resource
 def init_connection():
     return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="proyecto"
+        host = "gateway01.us-east-1.prod.aws.tidbcloud.com",
+        port = 4000,
+        user = "kBF3tmir54yheNn.root",
+        password = "zxO1bF8L2ArJVsAh",
+        database = "retail",
+        ssl_ca = "isrgrootx1.pem",
+        ssl_verify_cert = True,
+        ssl_verify_identity = True
     )
 
 try:

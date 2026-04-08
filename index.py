@@ -17,10 +17,14 @@ cap = cv2.VideoCapture('http://192.168.100.129:4747/video')
 # --- CONFIGURACIÓN DE BASE DE DATOS MYSQL ---
 try:
     db = mysql.connector.connect(
-        host="localhost",
-        user="root",        # Reemplazá con tu usuario
-        password="",        # Reemplazá con tu contraseña
-        database="proyecto"   # Reemplazá con el nombre de tu base de datos
+        host = "gateway01.us-east-1.prod.aws.tidbcloud.com",
+        port = 4000,
+        user = "kBF3tmir54yheNn.root",
+        password = "zxO1bF8L2ArJVsAh",
+        database = "retail",
+        ssl_ca = "isrgrootx1.pem",
+        ssl_verify_cert = True,
+        ssl_verify_identity = True
     )
     cursor = db.cursor()
     # Creamos la tabla automáticamente si no existe
