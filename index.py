@@ -9,7 +9,10 @@ print("Cargando modelo YOLO...")
 model = YOLO('yolov8n.pt') 
 
 # --- USANDO LA CÁMARA DE LA NOTEBOOK ---
-cap = cv2.VideoCapture(0)
+# cap = cv2.VideoCapture(0)
+# --- PARA USAR DROIDCAM POR IP / WIFI (Descomentar y cambiar por la IP que te da la app) ---
+cap = cv2.VideoCapture('http://192.168.100.129:4747/video')
+
 
 # --- CONFIGURACIÓN DE BASE DE DATOS MYSQL ---
 try:
@@ -17,7 +20,7 @@ try:
         host="localhost",
         user="root",        # Reemplazá con tu usuario
         password="",        # Reemplazá con tu contraseña
-        database="retail"   # Reemplazá con el nombre de tu base de datos
+        database="proyecto"   # Reemplazá con el nombre de tu base de datos
     )
     cursor = db.cursor()
     # Creamos la tabla automáticamente si no existe
