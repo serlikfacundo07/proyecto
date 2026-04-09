@@ -41,7 +41,7 @@ python3 -m venv venv
 En Windows (PowerShell):
 
 Bash
-.\venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
 (Nota: Si Windows arroja un error de ejecución de scripts, abrí PowerShell como Administrador, ejecutá Set-ExecutionPolicy RemoteSigned -Scope CurrentUser, escribí 'S' para confirmar y volvé a intentar).
 
 En Linux / Mac:
