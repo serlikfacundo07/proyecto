@@ -22,7 +22,7 @@ def init_connection():
         host = "gateway01.us-east-1.prod.aws.tidbcloud.com",
         port = 4000,
         user = "kBF3tmir54yheNn.root",
-        password = "zxO1bF8L2ArJVsAh",
+        password = "aiHVXDhlzvmgO1re",
         database = "retail",
         ssl_ca = "isrgrootx1.pem",
         ssl_verify_cert = True,
